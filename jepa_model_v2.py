@@ -122,6 +122,9 @@ def train(epochs=2, batch_size=16, lr=1e-4, device="cuda"):
     torch.save(model.state_dict(), "jepa_checkpoint.pth")
     return model
 
+def save_model(model, path):
+    torch.save(model.state_dict(), path)
+
 def load_model(path, device="cuda", repr_dim=128):
     model = JEPA(repr_dim=repr_dim).to(device)
     model.load_state_dict(torch.load(path, map_location=device))
