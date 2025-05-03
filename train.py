@@ -4,7 +4,7 @@ import torch.optim as optim
 from tqdm import tqdm
 
 from dataset import create_wall_dataloader
-from jepa_model import JEPA, save_model
+from jepa_model_2 import JEPA, save_model
 
 
 def compute_loss(pred_latents, target_latents):
