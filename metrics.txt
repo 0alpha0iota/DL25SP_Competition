@@ -1,0 +1,16 @@
+
+
+
+normal loss: 10.79248046875
+wall loss: 14.70717716217041
+wall_other loss: 17.338001251220703
+expert loss: 58.937076568603516
+Total Trainable Parameters: 632,432
+
+To get our model weights, called jepa_checkpoint.pth in our code, simply run python jepa_model_v2.py in the terminal. 
+
+To get our evaluation loss, simply run main.py in our code. 
+
+
+
+
