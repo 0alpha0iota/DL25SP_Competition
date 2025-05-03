@@ -1,7 +1,7 @@
 from dataset import create_wall_dataloader
 from evaluator import ProbingEvaluator
 import torch
-from models import MockModel
+from jepa_model_v2 import JEPA
 import glob
 
 
@@ -75,9 +75,9 @@ def load_expert_data(device):
 
 
 def load_model():
-    """Load or initialize the model."""
-    # TODO: Replace MockModel with your trained model
-    model = MockModel()
+    """Load your trained JEPA model from disk."""
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = JEPA.load_model("jepa_checkpoint.pth", device=device)
     return model
 
 
